@@ -1,0 +1,11 @@
+---
+pt-BR:
+  periodicities:
+    create:
+      success: 'Periodicidade adicionada'
+      error: 'Não foi possível adicionar periodicidade'
+    destroy:
+      success: 'Periodicidade removida'
+    update:
+      success: 'Periodicidade editada'
+      error: 'Não foi possível editar periodicidade'

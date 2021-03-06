@@ -1,0 +1,19 @@
+<div class="ls-modal" id="addPeriodicity">
+  <div class="ls-modal-box">
+    <div class="ls-modal-header">
+      <button data-dismiss="modal">&times;</button>
+      <h4 class="ls-modal-title"><%= t('.title') %></h4>
+    </div>
+    <div class="ls-modal-body" id="myModalBody">
+      <%= form_with model: @periodicity, url: periodicities_path, local: true do | form |%>
+        <div class="field">
+          <%= form.label :name %>
+          <%= form.text_field :name %>
+        </div>
+    </div>
+    <div class="ls-modal-footer">
+      <%= form.submit class: 'ls-btn-primary' %>
+    </div>
+      <% end %>
+  </div>
+</div>
