@@ -4,13 +4,13 @@
     <div class="field ls-label">
       <!-- <%= f.label :email %> -->
       <%= f.email_field :email, autofocus: true, autocomplete: "email", 
-                              class: 'ls-login-bg-user ls-field-lg', placeholder: 'Email' %>
+                              class: 'ls-login-bg-user ls-field-lg', placeholder: t('.email_label') %>
     </div>
 
     <div class="field ls-label">
       <!-- <%= f.label :password %>-->
       <%= f.password_field :password, autocomplete: "current-password", 
-                                      class: 'ls-login-bg-user ls-field-lg', placeholder: 'Senha' %>
+                                      class: 'ls-login-bg-user ls-field-lg', placeholder: t('.password_label') %>
     </div>
 
     <!-- <% if devise_mapping.rememberable? %>
@@ -21,7 +21,7 @@
     <% end %> -->
 
     <div class="actions">
-      <%= f.submit "Log in", class: 'ls-btn-primary ls-btn-block ls-btn-lg' %>
+      <%= f.submit t('.log_in'), class: 'ls-btn-primary ls-btn-block ls-btn-lg' %>
     </div>
 
 <% end %>
