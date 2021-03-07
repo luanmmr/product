@@ -29,7 +29,7 @@ class ProductTypesController < ApplicationController
 
   def destroy
     ProductType.destroy(params[:id])
-    redirect_back fallback_location: product_types_path, 
+    redirect_back fallback_location: product_types_path,
                   notice: t('.success')
   end
 

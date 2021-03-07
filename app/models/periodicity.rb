@@ -12,7 +12,7 @@ class Periodicity < ApplicationRecord
   private
 
   def normalize_name
-    self.name = name.downcase unless name.nil?
+    self.name = name.downcase if name
   end
 
   def set_period
