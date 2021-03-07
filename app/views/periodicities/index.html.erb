@@ -34,8 +34,8 @@
       <td class="hidden-xs"><%= periodicity.period %></td>
       <td>
         <%= link_to t('.edit_button'), edit_periodicity_path(periodicity), class: 'ls-btn' %> 
-        <%= link_to '', periodicity, method: :delete, class: 'ls-btn-primary-danger ls-ico-remove',
-                                     data: { confirm: t('.confirmation_deletion') } %>
+        <%= link_to 'Deletar', periodicity, method: :delete, class: 'ls-btn-primary-danger ls-ico-remove',
+                                     data: { confirm: t('.confirmation_deletion') }, placeholder: 'Deletar' %>
       </td>
     </tr>
   <% end %>

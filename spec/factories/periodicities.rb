@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :periodicity do
-    name { "MyString" }
+    name { "mensal" }
     period { 1 }
   end
 end
