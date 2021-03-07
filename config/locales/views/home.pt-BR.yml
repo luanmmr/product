@@ -3,4 +3,5 @@ pt-BR:
   layouts:
     app:
       periodicity_title: 'Periodicidades'
+      product_types_title: 'Produtos'
 

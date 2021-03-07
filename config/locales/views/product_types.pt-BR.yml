@@ -1,0 +1,18 @@
+---
+pt-BR:
+  product_types:
+    index:
+      title: 'Produtos'
+      name_column: 'Nome'
+      description_column: 'Descrição'
+      product_key_column: 'Chave do Produto'
+      id_column: 'ID'
+      edit_button: 'Editar'
+      add_button: 'Add Produto'
+      errors_phrase: 'Possíveis erros'
+      confirmation_deletion: 'Confirmar a deleção?'
+    form_modal:
+      title: 'Adicionar Produto'
+    edit:
+      title: 'Editar Produto'
+      errors_phrase: 'Possíveis erros'

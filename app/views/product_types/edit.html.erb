@@ -3,24 +3,25 @@
 <div class="ls-alert-danger"><%= alert %></div>
 <div class="ls-alert-success"><%= notice %></div>
 
-<% if @periodicity.errors.any? %>
+<% if @product_type.errors.any? %>
 <ul style="list-style-type:none">
   <h4><%= t('.errors_phrase') %>: </h4><br>
-  <% @periodicity.errors.full_messages.each do |msg| %>
+  <% @product_type.errors.full_messages.each do |msg| %>
     <li>- <%= msg %></li>
   <% end %>
 </ul>
  <br><br>
  <% end %>
 
-<%= form_with model: @periodicity, local: true, class: 'ls-form row' do | form |%>
+ <%= form_with model: @product_type, local: true, class: 'ls-form row' do | form |%>
   <fieldset>
     <label class="ls-label col-md-4 col-xs-12">
-      <%= form.label :name %>
-      <%= form.text_field :name %>
+      <%= form.label :description %>
+      <%= form.text_field :description %>
     </label>
     <div class="ls-modal-footer">
       <%= form.submit class: 'ls-btn-primary' %>
     </div>
   </fieldset>
 <% end %>
+

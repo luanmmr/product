@@ -1,0 +1,49 @@
+ <h1 class="ls-title-intro ls-ico-calendar"><%= t('.title') %></h1>
+
+<div class="ls-alert-danger"><%= alert %></div>
+<div class="ls-alert-success"><%= notice %></div>
+
+<% if @product_type.errors.any? %>
+<ul style="list-style-type:none">
+  <h4><%= t('.errors_phrase') %>: </h4><br>
+  <% @product_type.errors.full_messages.each do |msg| %>
+    <li>- <%= msg %></li>
+  <% end %>
+</ul>
+ <br><br>
+ <% end %>
+
+<button data-ls-module="modal" data-target="#addProductType" 
+        class="ls-btn-primary ls-ico-origins"> <%= t('.add_button') %>
+</button>
+
+ <table class="ls-table ls-table-striped">
+  <thead>
+    <tr>
+      <th class="hidden-xs"><%= t('.id_column') %></th>
+      <th><%= t('.name_column') %></th>
+      <th class="hidden-xs"><%= t('.description_column') %></th>
+      <th><%= t('.product_key_column') %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @product_types.each do | product | %>
+    <tr id=<%= "product-#{product.id}" %>>
+      <td class="hidden-xs"><%= product.id %></td>
+      <td><%= product.name %></td>
+      <td class="hidden-xs"><%= product.description %></td>
+      <td><%= product.product_key %></td>
+      <td class="hidden-xs">
+        <%= link_to t('.edit_button'), edit_product_type_path(product), class: 'ls-btn' %> 
+        <%= link_to 'Deletar', product, method: :delete, class: 'ls-btn-primary-danger ls-ico-remove',
+                                     data: { confirm: t('.confirmation_deletion') }, placeholder: 'Deletar' %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= render 'form_modal' %>
+
+<br><br>

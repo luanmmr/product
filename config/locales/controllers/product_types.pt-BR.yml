@@ -1,0 +1,11 @@
+---
+pt-BR:
+  product_types:
+    create:
+      success: 'Produto adicionado'
+      error: 'Não foi possível adicionar o produto'
+    destroy:
+      success: 'Produto removido'
+    update:
+      success: 'Produto editado'
+      error: 'Não foi possível editar o produto'

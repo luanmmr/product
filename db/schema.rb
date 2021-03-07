@@ -10,11 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_06_042212) do
+ActiveRecord::Schema.define(version: 2021_03_07_012410) do
 
   create_table "periodicities", force: :cascade do |t|
     t.string "name"
     t.integer "period"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "product_types", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "product_key"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

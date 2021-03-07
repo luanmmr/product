@@ -7,8 +7,8 @@ class PeriodicitiesController < ApplicationController
 
   def create
     @periodicity = Periodicity.new(periodicity_params)
-    return redirect_to periodicities_path,
-           notice: t('.success') if @periodicity.save
+    return redirect_to periodicities_path, notice: t('.success') \
+           if @periodicity.save
 
     flash.now[:alert] = t('.error')
     render :index
@@ -20,8 +20,8 @@ class PeriodicitiesController < ApplicationController
 
   def update
     @periodicity = Periodicity.find(params[:id])
-    return redirect_to periodicities_path,
-           notice: t('.success') if @periodicity.update(periodicity_params)
+    return redirect_to periodicities_path, notice: t('.success') \
+           if @periodicity.update(periodicity_params)
 
     flash.now[:alert] = t('.error')
     render :edit
@@ -29,7 +29,8 @@ class PeriodicitiesController < ApplicationController
 
   def destroy
     Periodicity.destroy(params[:id])
-    redirect_back fallback_location: periodicities_path, notice: t('.success')
+    redirect_back fallback_location: periodicities_path,
+                  notice: t('.success')
   end
 
   private
