@@ -10,11 +10,11 @@ RSpec.describe Periodicity, type: :model do
       expect(periodicity.errors.full_messages).to include(
         'Nome não pode ficar em branco',
         'Período não pode ficar em branco'
-      ) 
+      )
     end
   end
 
-  describe  '#inclusion' do
+  describe '#inclusion' do
     it 'validates if name is included in the list' do
       periodicity = described_class.new(name: 'teste')
 
