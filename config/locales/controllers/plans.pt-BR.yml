@@ -1,0 +1,11 @@
+---
+pt-BR:
+  plans:
+    create:
+      success: 'Plano adicionado'
+      error: 'Não foi possível adicionar o plano'
+    destroy:
+      success: 'Plano removido'
+    update:
+      success: 'Plano editado'
+      error: 'Não foi possível editar o plano'

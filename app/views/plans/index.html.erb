@@ -1,0 +1,63 @@
+ <h1 class="ls-title-intro ls-ico-checkbox-unchecked">
+  <%= Plan.model_name.human(count: 2) %>
+ </h1>
+
+<div class="ls-alert-danger"><%= alert %></div>
+<div class="ls-alert-success"><%= notice %></div>
+
+<% if @plan.errors.any? %>
+<ul style="list-style-type:none">
+  <h4><%= t('.errors_phrase') %>: </h4><br>
+  <% @plan.errors.full_messages.each do |msg| %>
+    <li>- <%= msg %></li>
+  <% end %>
+</ul>
+ <br><br>
+ <% end %>
+
+<button data-ls-module="modal" data-target="#addPlan" 
+        class="ls-btn-primary ls-ico-checkbox-unchecked"> <%= t('.add_button') %>
+</button>
+
+ <table class="ls-table ls-table-striped">
+  <thead>
+    <tr>
+      <th class="hidden-xs"><%= Plan.human_attribute_name('id') %></th>
+      <th><%= Plan.human_attribute_name('name') %></th>
+      <th class="hidden-xs"><%= Plan.human_attribute_name('description') %></th>
+      <th><%= ProductType.model_name.human %></th>
+      <th class="hidden-xs"><%= Plan.human_attribute_name('details') %></th>
+      <th><%= Plan.human_attribute_name('status') %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @plans.each do | plan | %>
+    <tr id=<%= "product-#{plan.id}" %>>
+      <td class="hidden-xs"><%= plan.id %></td>
+      <td><%= plan.name %></td>
+      <td class="hidden-xs"><%= plan.description %></td>
+      <td><%= plan.product_type.name %></td>
+      <td class="hidden-xs"><%= plan.details %></td>
+      <td>
+        <strong>
+          <% if plan.status == 'activated' %>
+            <%= link_to t('.status.deactivate'), deactivate_plan_path(plan), method: :post %>
+          <% else %>
+            <%= link_to t('.status.activate'), activate_plan_path(plan), method: :post %>
+          <% end %>
+        </strong>
+      </td>
+      <td class="hidden-xs">
+        <%= link_to t('.edit_button'), edit_plan_path(plan), class: 'ls-btn' %> 
+        <%= link_to '', plan, method: :delete, class: 'ls-btn-primary-danger ls-ico-remove',
+                                     data: { confirm: t('.confirmation_deletion') } %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= render 'modal' %>
+
+<br><br>

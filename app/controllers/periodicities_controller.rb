@@ -1,5 +1,5 @@
 class PeriodicitiesController < ApplicationController
-  before_action :periodicity_all, only: %i[index create]
+  before_action :periodicities_all, only: %i[index create]
 
   def index
     @periodicity = Periodicity.new
@@ -35,7 +35,7 @@ class PeriodicitiesController < ApplicationController
 
   private
 
-  def periodicity_all
+  def periodicities_all
     @periodicities = Periodicity.all
   end
 
