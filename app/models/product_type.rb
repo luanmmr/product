@@ -4,13 +4,15 @@ class ProductType < ApplicationRecord
   validates :name, :product_key, uniqueness: true
   validates :product_key, length: { maximum: 8 }
 
-  before_validation :normalize_name, on: :create
-  before_validation :set_product_key, on: :create
+  before_validation :normalize_name, on: %i[create update]
+  before_validation :set_product_key, on: %i[create update]
 
   private
 
   def normalize_name
-    self.name = name.downcase if name
+    return unless name
+    
+    self.name = name.downcase.capitalize
   end
 
   def set_product_key

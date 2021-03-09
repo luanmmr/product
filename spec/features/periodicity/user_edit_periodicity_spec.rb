@@ -16,7 +16,7 @@ feature 'User edit periodicity' do
       click_on 'Atualizar Periodicidade'
     end
 
-    expect(page).to have_content('trimestral')
+    expect(page).to have_content('Trimestral')
     expect(page).to have_content(3)
     expect(page).to_not have_content('mensal')
   end

@@ -7,5 +7,6 @@ pt-BR:
         other: 'Periodicidades'
     attributes:
       periodicity:
+        id: 'ID'
         name: 'Nome'
         period: 'Período'

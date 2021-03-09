@@ -11,10 +11,7 @@
 
   <nav class="ls-dropdown-nav ls-user-menu">
     <ul>
-      <li><a href="#">Meus dados</a></li>
-      <li><a href="#">Faturas</a></li>
-      <li><a href="#">Planos</a></li>
-      <li><%= link_to 'Sair', destroy_user_session_path, method: :delete %></li>
+      <li><%= link_to t('.logout_button'), destroy_user_session_path, method: :delete %></li>
     </ul>
   </nav>
 </div>
@@ -43,9 +40,9 @@
 
   <nav class="ls-menu">
     <ul>
-      <li><%= link_to t('.periodicity_title'), periodicities_path, class: 'ls-ico-calendar' %></li>
-      <li><%= link_to t('.product_types_title'), product_types_path, class: 'ls-ico-origins' %></li>
-      <li><%= link_to t('.plan_title'), plans_path, class: 'ls-ico-checkbox-unchecked' %></li>
+      <li><%= link_to Periodicity.model_name.human(count: 2), periodicities_path, class: 'ls-ico-calendar' %></li>
+      <li><%= link_to ProductType.model_name.human(count: 2), product_types_path, class: 'ls-ico-origins' %></li>
+      <li><%= link_to Plan.model_name.human(count: 2), plans_path, class: 'ls-ico-checkbox-unchecked' %></li>
     </ul>
   </nav>
 

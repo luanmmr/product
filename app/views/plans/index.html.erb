@@ -33,7 +33,7 @@
   </thead>
   <tbody>
   <% @plans.each do | plan | %>
-    <tr id=<%= "product-#{plan.id}" %>>
+    <tr id=<%= "plan-#{plan.id}" %>>
       <td class="hidden-xs"><%= plan.id %></td>
       <td><%= plan.name %></td>
       <td class="hidden-xs"><%= plan.description %></td>
@@ -51,7 +51,8 @@
       <td class="hidden-xs">
         <%= link_to t('.edit_button'), edit_plan_path(plan), class: 'ls-btn' %> 
         <%= link_to '', plan, method: :delete, class: 'ls-btn-primary-danger ls-ico-remove',
-                                     data: { confirm: t('.confirmation_deletion') } %>
+                                     data: { confirm: t('.confirmation_deletion') }, 
+                                     id: 'deletar_button' %>
       </td>
     </tr>
   <% end %>

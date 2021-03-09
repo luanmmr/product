@@ -13,7 +13,7 @@ feature 'User register periodicity' do
       click_button 'Criar Periodicidade'
     end
 
-    expect(page).to have_content('mensal')
+    expect(page).to have_content('Mensal')
     expect(page).to have_content('1')
     expect(current_path).to eq(periodicities_path)
   end

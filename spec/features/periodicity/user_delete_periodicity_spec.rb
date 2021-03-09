@@ -9,9 +9,9 @@ feature 'User delete periodicity' do
     visit root_path
     click_link 'Periodicidades'
     within "tr#periodicity-#{periodicity.id}" do
-      click_on 'Deletar'
+      click_on 'deletar_button'
     end
 
-    expect(page).to_not have_content('mensal')
+    expect(page).to_not have_content('Mensal')
   end
 end

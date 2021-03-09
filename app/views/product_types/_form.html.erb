@@ -1,0 +1,18 @@
+<%= form_with model: @product_type, local: true, 
+              class: 'ls-form ls-form-horizontal' do | form |%>
+  <div class="ls-modal-body" id="myModalBody">
+    <fieldset>
+      <label class="ls-label col-md-4 col-xs-12">
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </label>
+      <label class="ls-label col-md-4 col-xs-12">
+        <%= form.label :description %>
+        <%= form.text_field :description %>
+      </label>
+    </fieldset>
+  </div>
+  <div class="ls-modal-footer">
+    <%= form.submit class: 'ls-btn-primary' %>
+  </div>
+<% end %>

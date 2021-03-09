@@ -1,4 +1,6 @@
- <h1 class="ls-title-intro ls-ico-calendar"><%= t('.title') %></h1>
+ <h1 class="ls-title-intro ls-ico-calendar">
+  <%= Periodicity.model_name.human(count: 2) %>
+</h1>
 
 <div class="ls-alert-danger"><%= alert %></div>
 <div class="ls-alert-success"><%= notice %></div>
@@ -20,9 +22,16 @@
  <table class="ls-table ls-table-striped">
   <thead>
     <tr>
-      <th class="hidden-xs"><%= t('.id_column') %></th>
-      <th><%= t('.name_column') %></th>
-      <th class="hidden-xs"><%= t('.period_column') %>(<%= t('.sub_text_column_period') %>)</th>
+      <th class="hidden-xs">
+        <%= Periodicity.human_attribute_name('id') %>
+      </th>
+      <th>
+        <%= Periodicity.human_attribute_name('name') %>
+      </th>
+      <th class="hidden-xs">
+        <%= Periodicity.human_attribute_name('period') %>
+        (<%= t('.sub_text_column_period') %>)
+      </th>
       <th></th>
     </tr>
   </thead>
@@ -34,14 +43,15 @@
       <td class="hidden-xs"><%= periodicity.period %></td>
       <td>
         <%= link_to t('.edit_button'), edit_periodicity_path(periodicity), class: 'ls-btn' %> 
-        <%= link_to 'Deletar', periodicity, method: :delete, class: 'ls-btn-primary-danger ls-ico-remove',
-                                     data: { confirm: t('.confirmation_deletion') }, placeholder: 'Deletar' %>
+        <%= link_to '', periodicity, method: :delete, class: 'ls-btn-primary-danger ls-ico-remove',
+                                     data: { confirm: t('.confirmation_deletion') }, 
+                                     id: 'deletar_button' %>
       </td>
     </tr>
   <% end %>
   </tbody>
 </table>
 
-<%= render 'form_modal' %>
+<%= render 'modal' %>
 
 <br><br>

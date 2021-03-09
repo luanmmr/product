@@ -11,7 +11,7 @@ pt-BR:
       add_button: 'Add Produto'
       errors_phrase: 'Possíveis erros'
       confirmation_deletion: 'Confirmar a deleção?'
-    form_modal:
+    modal:
       title: 'Adicionar Produto'
     edit:
       title: 'Editar Produto'

@@ -73,12 +73,12 @@ RSpec.describe Periodicity, type: :model do
   end
 
   describe '#normalize_name' do
-    it 'normalize name in downcase' do
+    it 'normalize name in downcase and capitalize' do
       periodicity = Periodicity.new(name: 'MENSAL')
 
       periodicity.valid?
 
-      expect(periodicity.name).to eq('mensal')
+      expect(periodicity.name).to eq('Mensal')
     end
   end
 

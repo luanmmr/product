@@ -1,3 +1,5 @@
+user = User.create!(email: 'luan.mesquita@hotmail.com', password: '123456')
+
 periodicity_mensal = Periodicity.create(name: 'Mensal', period: 1)
 periodicity_trimestral = Periodicity.create(name: 'Trimestral', period: 3)
 periodicity_semestral = Periodicity.create(name: 'Semestral', period: 6)
@@ -14,4 +16,26 @@ email = ProductType.create!(name: 'Email',
 cloud = ProductType.create!(name: 'Cloud Computing', 
                            description: 'É uma tecnologia que oferece recursos '\
                                         'computacionais remotos, como memória, '\
-                                        'processamento e armazenamento de dados.') 
+                                        'processamento e armazenamento de dados.')
+
+go = Plan.create!(name: 'Go', description: '1 site, 3 emails (10GB cada), 1 ano de '\
+                                           'de domínio grátis.',
+                  product_type: hospedagem, details: 'PHP 5.2, 5.3, 5.4, 5.5, 5.6 e 7 '\
+                                                     'ASP, ASP.NET 2.0/3.0/3.5/ e 4.0/4.'\
+                                                     '5/4.5.1/4.5.2 (medium trust).',
+                  status: 'activated')
+
+initial = Plan.create!(name: 'Initial', description: '25 caixas postais, 15 GB por caixa '\
+                                                     'A partir de R$ 1,05 por caixa.',
+                       product_type: email, details: 'Antispam e antivírus, Aplicativo Type'\
+                                                     ' App, Painel de controle, Versão mobile.',
+                      status: 'activated')
+
+cloud_server_pro = Plan.create!(name: 'Cloud Pro 1 GB', description: '1 GB de memória, 2 vCPUs, '\
+                                                                     '20 GB de disco SSD '\
+                                                                     '1 TB de transferência.',
+                                product_type: cloud, details: 'Disco SSD, Escalabilidade vertical '\
+                                                              'Acesso Root/Admin, Serviços adicionais.',
+                                status: 'disabled')
+
+

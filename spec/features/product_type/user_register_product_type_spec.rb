@@ -9,12 +9,12 @@ feature 'User register product' do
     click_on 'Produtos'
     click_on 'Add Produto'
     within 'form' do
-      fill_in 'Nome', with: 'Hospedagem de Sites'
+      fill_in 'Nome', with: 'hospedagem de sites'
       fill_in 'Descrição', with: 'Espaço para armazenamento do site'
       click_button 'Criar Produto'
     end
 
-    expect(page).to have_content('hospedagem de sites')
+    expect(page).to have_content('Hospedagem de sites')
     expect(page).to have_content('Espaço para armazenamento do site')
     expect(current_path).to eq(product_types_path)
   end

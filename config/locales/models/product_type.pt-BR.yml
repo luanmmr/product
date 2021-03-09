@@ -7,6 +7,7 @@ pt-BR:
         other: 'Produtos'
     attributes:
       product_type:
+        id: 'ID'
         name: 'Nome'
         description: 'Descrição'
         product_key: 'Chave do Produto'

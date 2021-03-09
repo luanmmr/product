@@ -13,14 +13,4 @@
  <br><br>
  <% end %>
 
-<%= form_with model: @periodicity, local: true, class: 'ls-form row' do | form |%>
-  <fieldset>
-    <label class="ls-label col-md-4 col-xs-12">
-      <%= form.label :name %>
-      <%= form.text_field :name %>
-    </label>
-    <div class="ls-modal-footer">
-      <%= form.submit class: 'ls-btn-primary' %>
-    </div>
-  </fieldset>
-<% end %>
+<%= render 'form' %>
