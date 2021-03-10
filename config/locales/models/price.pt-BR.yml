@@ -1,0 +1,13 @@
+---
+pt-BR:
+  activerecord:
+    models:
+      price:
+        one: 'Preço'
+        other: 'Preços'
+    attributes:
+      price:
+        id: 'ID'
+        plan_price: 'Preço do Plano'
+        plan: 'Plano'
+        periodicity: 'Periodicidade'

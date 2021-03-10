@@ -1,0 +1,54 @@
+ <h1 class="ls-title-intro ls-ico-star">
+  <%= Price.model_name.human(count: 2) %>
+ </h1>
+
+<div class="ls-alert-danger"><%= alert %></div>
+<div class="ls-alert-success"><%= notice %></div>
+
+<% if @price.errors.any? %>
+<ul style="list-style-type:none">
+  <h4><%= t('.errors_phrase') %>: </h4><br>
+  <% @price.errors.full_messages.each do |msg| %>
+    <li>- <%= msg %></li>
+  <% end %>
+</ul>
+ <br><br>
+ <% end %>
+
+<button data-ls-module="modal" data-target="#addPlan" 
+        class="ls-btn-primary ls-ico-star"> <%= t('.add_button') %>
+</button>
+
+ <table class="ls-table ls-table-striped">
+  <thead>
+    <tr>
+      <th class="hidden-xs"><%= Price.human_attribute_name('id') %></th> 
+      <th><%= Price.human_attribute_name('plan_price') %></th>
+      <th class="hidden-xs"><%= ProductType.model_name.human(count: 1) %></th>
+      <th><%= Price.human_attribute_name('plan') %></th>
+      <th class="hidden-xs"><%= Price.human_attribute_name('periodicity') %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @prices.each do | price | %>
+    <tr id=<%= "price-#{price.id}" %>>
+      <td class="hidden-xs"><%= price.id %></td>
+      <td><%= format("%.2f", price.plan_price) %></td>
+      <td class="hidden-xs"><%= price.product_type.name %></td>
+      <td><%= price.plan.name %></td>
+      <td class="hidden-xs"><%= price.periodicity.name %></td>
+      <td>
+        <%= link_to t('.edit_button'), edit_price_path(price), class: 'ls-btn' %> 
+        <%= link_to '', price, method: :delete, class: 'ls-btn-primary-danger ls-ico-remove',
+                                     data: { confirm: t('.confirmation_deletion') }, 
+                                     id: 'deletar_button' %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= render 'modal' %>
+
+<br><br>

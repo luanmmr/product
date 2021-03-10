@@ -2,13 +2,6 @@
 pt-BR:
   plans:
     index:
-      title: 'Planos'
-      id_column: 'ID'
-      name_column: 'Nome'
-      description_column: 'Descrição'
-      product_column: 'Produto'
-      details_column: 'Detalhes'
-      status_column: 'Status'
       edit_button: 'Editar'
       add_button: 'Add Plano'
       errors_phrase: 'Possíveis erros'
@@ -16,8 +9,9 @@ pt-BR:
       status:
         activate: 'Ativar'
         deactivate: 'Desativar'
-    form:
+    modal:
       title: 'Adicionar Plano'
+    form:
       status:
         activated: 'Ativado'
         disabled: 'Desativado'

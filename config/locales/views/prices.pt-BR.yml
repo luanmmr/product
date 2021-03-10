@@ -1,14 +1,13 @@
 ---
 pt-BR:
-  periodicities:
+  prices:
     index:
-      sub_text_column_period: 'qtd. Meses'
       edit_button: 'Editar'
-      add_button: 'Add Periodicidade'
+      add_button: 'Add Preço'
       errors_phrase: 'Possíveis erros'
       confirmation_deletion: 'Confirmar a deleção?'
     modal:
-      title: 'Adicionar Periodicidade'
+      title: 'Adicionar Preço'
     edit:
-      title: 'Editar Periodicidade'
+      title: 'Editar Preço'
       errors_phrase: 'Possíveis erros'

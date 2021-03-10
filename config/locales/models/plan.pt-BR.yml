@@ -12,5 +12,6 @@ pt-BR:
         description: 'Descrição'
         product_key: 'Chave do Produto'
         product_type_id: 'Produto'
+        product_type: 'Produto'
         details: 'Detalhes'
         status: 'Status'

@@ -1,0 +1,11 @@
+---
+pt-BR:
+  prices:
+    create:
+      success: 'Preço adicionado'
+      error: 'Não foi possível adicionar o preço'
+    destroy:
+      success: 'Preço removido'
+    update:
+      success: 'Preço editado'
+      error: 'Não foi possível editar o preço'

@@ -1,10 +1,10 @@
 user = User.create!(email: 'luan.mesquita@hotmail.com', password: '123456')
 
-periodicity_mensal = Periodicity.create(name: 'Mensal', period: 1)
-periodicity_trimestral = Periodicity.create(name: 'Trimestral', period: 3)
-periodicity_semestral = Periodicity.create(name: 'Semestral', period: 6)
-periodicity_anual = Periodicity.create(name: 'Anual', period: 12)
-periodicity_trienal = Periodicity.create(name: 'Trienal', period: 36)
+mensal = Periodicity.create(name: 'Mensal', period: 1)
+trimestral = Periodicity.create(name: 'Trimestral', period: 3)
+semestral = Periodicity.create(name: 'Semestral', period: 6)
+anual = Periodicity.create(name: 'Anual', period: 12)
+trienal = Periodicity.create(name: 'Trienal', period: 36)
 
 hospedagem = ProductType.create!(name: 'Hospedagem de Sites', 
                                 description: 'É um espaço em servidor para que você '\
@@ -37,5 +37,12 @@ cloud_server_pro = Plan.create!(name: 'Cloud Pro 1 GB', description: '1 GB de me
                                 product_type: cloud, details: 'Disco SSD, Escalabilidade vertical '\
                                                               'Acesso Root/Admin, Serviços adicionais.',
                                 status: 'disabled')
+
+price_one = Price.create!(plan_price: 315.60, plan: initial, periodicity: anual)
+price_two = Price.create!(plan_price: 86.10, plan: initial, periodicity: trimestral)
+price_three = Price.create!(plan_price: 29.60, plan: initial, periodicity: mensal)
+price_four = Price.create!(plan_price: 74.70, plan: go, periodicity: trimestral)
+price_five = Price.create!(plan_price: 298.80, plan: go, periodicity: anual)
+price_six = Price.create!(plan_price: 79.00, plan: cloud_server_pro, periodicity: mensal)
 
 
