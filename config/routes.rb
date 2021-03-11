@@ -7,4 +7,16 @@ Rails.application.routes.draw do
     post 'deactivate', 'activate', on: :member
   end
   resources :prices, only: %i[index create update edit destroy]
+
+  namespace 'api' do
+    namespace 'v1' do
+      resources :periodicities, only: :index
+      resources :product_types, only: %i[index show] do
+        get 'plans', on: :member
+      end
+      resources :plans, only: %i[index show] do
+        resources :prices, only: :index
+      end
+    end
+  end
 end
