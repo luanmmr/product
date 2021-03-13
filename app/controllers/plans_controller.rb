@@ -23,7 +23,7 @@ class PlansController < ApplicationController
     @plan = Plan.find(params[:id])
     return redirect_to plans_path, notice: t('.success') \
            if @plan.update(plan_params)
-    
+
     flash.now[:alert] = t('.error')
     render :edit
   end

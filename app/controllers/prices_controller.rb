@@ -23,7 +23,7 @@ class PricesController < ApplicationController
     @price = Price.find(params[:id])
     return redirect_to prices_path, notice: t('.success') \
            if @price.update(price_params)
-    
+
     flash.now[:alert] = t('.error')
     render :edit
   end

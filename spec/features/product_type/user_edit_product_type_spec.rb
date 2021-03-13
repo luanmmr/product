@@ -53,7 +53,7 @@ feature 'User edit product description' do
       fill_in 'Nome', with: 'Email'
       click_on 'Atualizar Produto'
     end
-    
+
     expect(page).to have_content('Nome já está em uso')
   end
 end

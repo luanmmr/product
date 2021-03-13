@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Plan, type: :model do
   describe '#presence' do
     it 'validates every field must be filled' do
-      plan = described_class.new()
+      plan = described_class.new
 
       plan.valid?
 
@@ -23,9 +23,7 @@ RSpec.describe Plan, type: :model do
 
       plan.valid?
 
-      expect(plan.errors.full_messages).to include (
-        'Nome já está em uso'
-      )
+      expect(plan.errors.full_messages).to include 'Nome já está em uso'
     end
   end
 

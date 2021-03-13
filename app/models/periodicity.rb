@@ -13,7 +13,7 @@ class Periodicity < ApplicationRecord
 
   def normalize_name
     return unless name
-    
+
     self.name = name.downcase.capitalize
   end
 

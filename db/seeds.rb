@@ -31,7 +31,7 @@ initial = Plan.create!(name: 'Initial', description: '25 caixas postais, 15 GB p
                                                      ' App, Painel de controle, Versão mobile.',
                       status: 'activated')
 
-cloud_server_pro = Plan.create!(name: 'Cloud Pro 1 GB', description: '1 GB de memória, 2 vCPUs, '\
+cloud_server_pro = Plan.create!(name: 'Pro 1 GB', description: '1 GB de memória, 2 vCPUs, '\
                                                                      '20 GB de disco SSD '\
                                                                      '1 TB de transferência.',
                                 product_type: cloud, details: 'Disco SSD, Escalabilidade vertical '\

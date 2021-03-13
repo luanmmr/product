@@ -18,7 +18,7 @@ feature 'User edit periodicity' do
 
     expect(page).to have_content('Trimestral')
     expect(page).to have_content(3)
-    expect(page).to_not have_content('mensal')
+    expect(page).to_not have_content('Mensal')
   end
 
   scenario 'with wrong name' do

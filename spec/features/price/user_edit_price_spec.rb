@@ -8,7 +8,7 @@ feature 'User edit price' do
     create(:periodicity, name: 'Trimestral')
     produto = create(:product_type, name: 'Email')
     create(:plan, name: 'Initial', product_type: produto)
-    
+
     sign_in user, scope: :user
     visit root_path
     click_link 'Preços'
@@ -50,7 +50,6 @@ feature 'User edit price' do
     produto = create(:product_type, name: 'Email')
     plan = create(:plan, name: 'Initial', product_type: produto)
     create(:price, plan: plan, periodicity: periodicidade)
-    
 
     sign_in user, scope: :user
     visit root_path

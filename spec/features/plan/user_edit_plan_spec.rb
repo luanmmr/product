@@ -16,7 +16,7 @@ feature 'User edit plan' do
       click_on 'Atualizar Plano'
     end
 
-    expect(page).to have_content('Hospedagem i')
+    expect(page).to have_content('Hospedagem I')
     expect(page).to have_content('Minha descrição')
     expect(page).to have_content('Meus detalhes')
     expect(page).to_not have_content('Go')
@@ -47,7 +47,7 @@ feature 'User edit plan' do
   scenario 'and name must be unique' do
     user = create(:user)
     product = create(:product_type, name: 'Email')
-    plan_other = create(:plan, name: 'Initial', product_type: product)
+    create(:plan, name: 'Initial', product_type: product)
     plan = create(:plan)
 
     sign_in user, scope: :user
@@ -60,7 +60,7 @@ feature 'User edit plan' do
       fill_in 'Nome', with: 'Initial'
       click_on 'Atualizar Plano'
     end
-    
+
     expect(page).to have_content('Nome já está em uso')
   end
 end

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  get '/apis', to: 'apis#index'
   root to: 'home#index'
   resources :periodicities, only: %i[index create update edit destroy]
   resources :product_types, only: %i[index create update edit destroy]
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
     namespace 'v1' do
       resources :periodicities, only: :index
       resources :product_types, only: %i[index show] do
-        get 'plans', on: :member
+        resources :plans, only: :index, action: :product_type
       end
       resources :plans, only: %i[index show] do
         resources :prices, only: :index

@@ -2,8 +2,6 @@
 pt-BR:
   layouts:
     app:
-      periodicity_title: 'Periodicidades'
-      product_types_title: 'Produtos'
-      plan_title: 'Planos'
+      apis_title: 'APIs'
       logout_button: 'Sair'
 

@@ -7,9 +7,4 @@ class Api::V1::ProductTypesController < Api::V1::ApiController
     @product = ProductType.find(params[:id])
     render json: @product, status: :ok
   end
-
-  def plans
-    @plans = Plan.where(product_type: params[:id])
-    render json: @plans, status: :ok
-  end
 end
