@@ -1,0 +1,14 @@
+---
+pt-BR:
+  apis:
+    index:
+      title: 'APIs'
+      target_apis:
+        all_periodicities: 'Todas as periodicidades'
+        all_product_types: 'Todas os produtos'
+        one_product_type: 'Retorna um produto (:id - Id do Produto)'
+        product_plans: 'Retorna os planos do produto (:product_type_id - Id do Produto)'
+        all_plans: 'Todos os planos'
+        one_plan: 'Retorna um plano (:id - Id do Plano)'
+        activated_plans_prices: 'Retornas os preços do planos ativados (:plan_id - Id do Plano)'
+

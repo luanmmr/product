@@ -1,0 +1,42 @@
+<h1 class="ls-title-intro ls-ico-insert-template"><%= t('.title') %></h1>
+<h3><%= Periodicity.model_name.human(count: 2) %></h3> <br>
+<ul style="list-style-type: none; line-height:120%">
+  <li><strong><%= t('.target_apis.all_periodicities') %></strong>: <%= link_to '/api/v1/periodicities', api_v1_periodicities_path, 
+                                                                   target: "_blank" %> </li>
+</ul>
+
+<br><br>
+
+<h3><%= ProductType.model_name.human(count: 2) %></h3> <br>
+<ul style="list-style-type: none; line-height:120%">
+  <li><strong><%= t('.target_apis.all_product_types') %></strong>: <%= link_to '/api/v1/product_types', api_v1_product_types_path, 
+                                                                               target: "_blank" %> </li>
+  <li><strong><%= t('.target_apis.one_product_type') %></strong>: <%= link_to '/api/v1/product_types/:id', api_v1_product_type_path(1), 
+                                                                              target: "_blank" %> </li>
+</ul>
+
+
+<br><br>
+
+<h3><%= Plan.model_name.human(count: 2) %></h3> <br>
+<ul style="list-style-type: none; line-height:120%">
+  <li><strong><%= t('.target_apis.all_plans') %></strong>: <%= link_to '/api/v1/plans', api_v1_plans_path, 
+                                                                       target: "_blank" %> </li>
+  <li><strong><%= t('.target_apis.one_plan') %></strong>: <%= link_to '/api/v1/plans/:id', api_v1_plan_path(1), 
+                                                                      target: "_blank" %> </li>
+  <li><strong><%= t('.target_apis.product_plans') %></strong>: <%= link_to '/api/v1/product_types/:product_type_id/plans', 
+                                                                           api_v1_product_type_plans_path(1), 
+                                                                           target: "_blank" %> </li>                                                                      
+</ul>
+
+
+<br><br>
+
+<h3><%= Price.model_name.human(count: 2) %></h3> <br>
+<ul style="list-style-type: none; line-height:120%">
+  <li><strong><%= t('.target_apis.activated_plans_prices') %></strong>: <%= link_to '/api/v1/plans/:plan_id/prices', 
+                                                                           api_v1_plan_prices_path(1), 
+                                                                           target: "_blank" %> </li>
+</ul>
+
+<br><br>
