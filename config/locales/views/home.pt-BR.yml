@@ -2,6 +2,5 @@
 pt-BR:
   layouts:
     app:
-      apis_title: 'APIs'
       logout_button: 'Sair'
 
